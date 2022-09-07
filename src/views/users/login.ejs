@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head', {title: 'Login'}) %> 
+<body class="home-container forms-body admin-container form-login">
+    <%-include('../partials/header')  %>
+    <main>
+        <form action="/users/login" method="POST" class="form-addProduct" id="form-login">
+            <div class="form-container1 login-container1">
+                <div class="new-products-separador"></div>
+                <h2>Login</h2>
+                <div class="inputs-container1 login-inputs-container">
+                    <div class="input-container1">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Ingresar email" class="input-style1" value="<%= locals.old ? old.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <span class="error-message1 error-msg-register"><%= errors.email.msg %></span>
+                        <% } %>
+                        <div class="errors">
+                            <small class="text-danger error" id="emailError"></small>
+                        </div>
+                    </div>
+                    <div class="input-container1">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Ingresar contraseña" class="input-style1">
+                        <% if (locals.errors && errors.password) { %>
+                            <span class="error-message1 error-msg-register"><%= errors.password.msg %></span>
+                        <% } %>
+                        <div class="errors">
+                            <small class="text-danger error"id="passwordError"></small>
+                        </div>
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" name="remember"  >
+                        <label for="remember">Recordame</label>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-register" type="submit" >Ingresar</button>
+                    </div>
+                    <small id="submitErrors"></small>
+                    <div class="input-container1">
+                        <a href="">¿Olvidaste tu contraseña?</a><br>
+                        <a href="/users/register">¿No tenes cuenta?</a>
+                    </div>
+                </div>
+            </div>
+        </form>    
+    </main>
+    <%-include('../partials/footer')  %> 
+    <script src="/scripts/loginValidator.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+.login-container1 .error-message1 {
+    font-size: 14px;
+}
+
+.form-login .form-container1 {
+    height: 530px;
+}
+
+.login-inputs-container{
+    display: block;
+
+}
+
+.login-inputs-container .input-container1{
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-inputs-container .input-style1 {
+    background: transparent;
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 16px;
+    
+   
+}
+
+.input-style1.login-information{
+    border-bottom:  1px solid rgb(255, 117, 58);
+}
+
+.input-style1.login-is-valid{
+    border-bottom: 1px solid green;
+}
+
+.input-style1.login-is-invalid{
+    border-bottom: 1px solid red;
+}
+
+.login-inputs-container .btn-container {
+    width: 100%;
+}
+
+.login-inputs-container .btn-register {
+    width: 295px;
+}
+
+.forms-body .login-container1 {
+    max-width: 450px;
+}
+
+.btn-container + .input-container1{
+    margin-top: 35px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.login-container1 a:hover {
+    color: #FF753A;
+}
+
+.form-login #submitErrors {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.remember {
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+
+@media (min-width: 768px) {
+
+    .login-inputs-container label {
+        width: 360px;
+        font-size: 18px;
+    }
+
+    .login-inputs-container .input-style1{
+        width: 360px;
+    }
+    
+    .login-inputs-container .btn-register {
+        width: 360px;
+    }
+}

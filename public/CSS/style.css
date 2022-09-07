@@ -1,0 +1,19 @@
+/* estilos */
+
+@import url('general.css');
+/* home */
+@import url('./home/home.css');
+/* detalle de producto*/
+@import url('./detailsProduct/detailsProduct.css');
+
+@import url('profile.css');
+
+
+@import url('./admin/listProduct.css');
+/* formularios */
+@import url('forms.css');
+@import url('./admin/addProduct.css');
+@import url('login.css');
+/* Carrito */
+@import url('./carrito2.css');
+@import url('./home/header.css');

@@ -1,0 +1,163 @@
+
+
+.forms-body .form-container1 {
+    height: 910px;
+}
+
+.forms-body .file-container {
+    margin-top: 0;
+}
+
+.forms-body  label {
+    margin-bottom: -10px;
+}
+
+.terms-container {
+    display: inline-block;
+    margin-top: 38px;
+    width: 300px;
+}
+
+.forms-body .input-container1 label {
+    margin-top: 10px;
+    padding: 4px 2px;
+}
+
+.forms-body input[type=checkbox] {
+    position: relative;
+    top: 1px;
+}
+
+
+.forms-body .input-container1 .btn-file {
+    margin-top: 21px;
+}
+
+.forms-body .btn-container {
+    height: 40px;
+    width: 295px;
+    margin-top: 50px;
+}
+
+.btn-register {
+    border: 1px solid rgba(146, 146, 146, 0.301);
+    border-radius: 6px;
+    background-color: #FF753A;
+    padding: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    width: 40%;
+    height: 100%;
+}
+
+
+body .input-container1 .is-valid{
+    border: 1px solid green
+}
+
+body .input-container1 .is-invalid {
+    border: 1px solid red;
+    
+}
+
+.errors {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-information {
+    color: rgb(255, 117, 58);
+}
+
+.login_acc {
+    margin-top: 54px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.login_acc a:hover {
+    color: #FF753A;
+}
+
+#images-preview {
+    height: 150px;
+    width: 530px;
+    display: flex;
+    order: 2;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+#images-preview .image-preview:hover {
+  border: 1px solid black;
+}
+
+.preview {
+    border: 1px solid black;
+  }
+  
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.image-preview{
+    width: 120px;
+	height: 120px;
+	display: inline-block;
+	vertical-align: middle;
+	border: solid 2px #CCC;
+	background-size: cover;
+	position: relative;
+}
+
+.image-preview:not(:last-child){
+    margin-right: 5px;
+}
+
+.close-button {
+    width: 20px;
+	height: 20px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .forms-body .inputs-container1 {
+        gap: 21px 34px;
+    }
+
+    .forms-body .form-container1 {
+        height: 780px;
+    }
+
+    .forms-body .btn-container {
+        width: 450px;
+        margin-top: 50px;
+    }
+
+    .terms-container {
+        margin-top: 24px;
+        
+    }
+
+
+}

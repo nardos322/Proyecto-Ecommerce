@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head', {title: 'Listado de productos'})  %> 
+<body class="listProduct home-container admin-container">
+    
+    <%-include('../partials/header')  %> 
+    
+<main class="tabla">
+    <h2>List products</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Marca</th>
+                <th>Price</th>
+                <th>Subcategory</th>
+                <th>Stock</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(product => { %>
+                
+              
+                    <tr>
+                        <th><a href="product/detail/<%- product.id %> "><%- product.id %></a></th>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.name %></a></td>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.marca.marca %></a></td>
+                        <td><a href="product/detail/<%- product.id %> ">$<%- product.price %></a></td>
+                        <td><a href="product/detail/<%- product.id %> "><%- product.subcategories.name %></a></td>
+                        <td><%- product.stock %></td>
+                        <td>
+
+                            <% if (product.subcategories.name === 'Guitarras Electricas') { %>
+                                <a href="/admin/products/guitar/edit/<%- product.id %> " class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                            <% } else if  (product.subcategories.name === 'Accesorios') { %> 
+                                <a href="/admin/products/accesory/edit/<%- product.id %> " class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                            
+                            <% } else if (product.subcategories.name === 'Pedales'){ %>
+                                <a href="/admin/products/pedal/edit/<%- product.id %> " class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                            
+                            <% } else if (product.subcategories.name === 'Cables para instrumentos') { %>
+                                <a href="/admin/products/cable/edit/<%- product.id %> " class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                </a>
+                            <% } %>    
+
+                                <form action="/admin/products/delete/<%- product.id %>?_method=DELETE" method="POST">
+                                    <button class="btn-danger">
+                                        <i class="fa-solid fa-xmark fa-lg"></i>
+                                    </button>
+                                </form>
+                            
+                        </td>    
+                    </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</main>
+ 
+    
+    <%-include('../partials/footer')  %> 
+</body>
+</html>
